@@ -1,0 +1,177 @@
+/* ===== Variabel warna ===== */
+:root {
+  --akbar_blue: #1d5fe0;
+  --akbar_blue_light: #7fb0ff;
+  --akbar_navy: #0f1d3a;
+  --akbar_text: #1c2540;
+  --akbar_muted: #5b6785;
+  --akbar_bg_soft: #eef4ff;
+  --akbar_line: #e3e9f5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+.akbar_body {
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  color: var(--akbar_text);
+  background: #fff;
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+.akbar_container { width: min(1040px, 92%); margin: 0 auto; }
+.akbar_blue { color: var(--akbar_blue); }
+.akbar_blue_light { color: var(--akbar_blue_light); }
+
+a:focus-visible { outline: 3px solid var(--akbar_blue); outline-offset: 3px; border-radius: 6px; }
+
+/* ===== Header & Menu ===== */
+#akbar_header {
+  position: sticky; top: 0; z-index: 10;
+  background: #fff;
+  border-bottom: 1px solid var(--akbar_line);
+}
+.akbar_header_inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.akbar_logo { font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+.akbar_logo_icon { color: var(--akbar_blue); font-weight: 800; font-size: 1.3rem; }
+.akbar_menu { display: flex; gap: 28px; }
+.akbar_menu_link { font-size: .85rem; font-weight: 500; padding: 4px 0; border-bottom: 2px solid transparent; }
+.akbar_menu_link:hover,
+.akbar_menu_link.akbar_active { color: var(--akbar_blue); border-bottom-color: var(--akbar_blue); }
+
+/* ===== Hero ===== */
+.akbar_photo {
+  width: 100%; max-width: 300px; aspect-ratio: 4 / 3; justify-self: end;
+  border-radius: 10px; object-fit: cover; object-position: center top;
+}
+#akbar_home {
+  background: linear-gradient(120deg, #f4f8ff 0%, #d9e6ff 100%);
+  overflow: hidden;
+}
+.akbar_hero_inner {
+  display: grid; grid-template-columns: 1.1fr 1fr; align-items: center;
+  gap: 24px; padding: 56px 0;
+}
+.akbar_hello { font-size: 1.4rem; font-weight: 500; }
+.akbar_name { font-size: clamp(2rem, 5vw, 3.1rem); line-height: 1.15; font-weight: 800; margin: 4px 0 10px; }
+.akbar_role { color: var(--akbar_muted); font-weight: 500; margin-bottom: 14px; }
+.akbar_intro { max-width: 440px; font-size: .92rem; margin-bottom: 24px; }
+.akbar_hero_buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.akbar_btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 22px; border-radius: 8px;
+  font-size: .85rem; font-weight: 600;
+  border: 2px solid var(--akbar_blue);
+  transition: background .2s, color .2s;
+}
+.akbar_btn_primary { background: var(--akbar_blue); color: #fff; }
+.akbar_btn_primary:hover { background: #164bb5; border-color: #164bb5; }
+.akbar_btn_outline { background: #fff; color: var(--akbar_blue); }
+.akbar_btn_outline:hover { background: var(--akbar_blue); color: #fff; }
+
+/* Ilustrasi laptop dari CSS */
+.akbar_hero_visual { position: relative; display: flex; justify-content: center; align-items: flex-end; min-height: 250px; }
+.akbar_laptop { width: 330px; max-width: 100%; transform: rotate(-3deg); }
+.akbar_laptop_screen {
+  height: 200px; background: linear-gradient(145deg, #1b2f5c, #0e1a36);
+  border: 8px solid #2a3350; border-radius: 12px 12px 4px 4px;
+  display: grid; place-items: center;
+  color: #5aa2ff; font-size: 3.4rem; font-weight: 700;
+}
+.akbar_laptop_base { height: 14px; background: #c9d1e3; border-radius: 0 0 14px 14px; margin: 0 -14px; }
+.akbar_plant { font-size: 4.2rem; margin-left: 10px; }
+
+/* ===== Section umum ===== */
+.akbar_section { padding: 44px 0 8px; }
+.akbar_title {
+  font-size: 1.35rem; font-weight: 700; margin-bottom: 18px;
+  padding-bottom: 6px; display: inline-block;
+  border-bottom: 3px solid var(--akbar_blue);
+}
+
+/* ===== About ===== */
+.akbar_about_inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; align-items: center; }
+.akbar_about_text p { font-size: .92rem; max-width: 460px; margin-bottom: 16px; }
+.akbar_info_list { display: flex; flex-wrap: wrap; gap: 10px 22px; font-size: .8rem; color: var(--akbar_muted); }
+.akbar_info_item { display: flex; align-items: center; gap: 6px; }
+.akbar_info_icon { color: var(--akbar_blue); }
+
+/* Foto: taruh foto.jpg di folder yang sama untuk menggantikan inisial */
+.akbar_photo {
+  width: 100%; max-width: 300px; aspect-ratio: 4 / 3; justify-self: end;
+  border-radius: 10px; background: #dfe7f7 url('foto.jpg') center / cover no-repeat;
+  display: grid; place-items: center;
+  color: var(--akbar_blue); font-weight: 800; font-size: 2.4rem;
+}
+
+/* ===== Skills ===== */
+.akbar_skill_grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+.akbar_skill_item {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 12px 8px; background: #f6f9ff; border: 1px solid var(--akbar_line);
+  border-radius: 8px; font-size: .8rem; font-weight: 500;
+}
+.akbar_badge {
+  display: inline-grid; place-items: center; min-width: 28px; height: 28px; padding: 0 5px;
+  border-radius: 6px; color: #fff; font-size: .68rem; font-weight: 700;
+}
+.akbar_c_orange { background: #e8832a; }
+.akbar_c_blue   { background: #2f7de1; }
+.akbar_c_navy   { background: #25356b; }
+.akbar_c_green  { background: #1f9d55; }
+.akbar_c_yellow { background: #e6a800; }
+.akbar_c_teal   { background: #2b7a9e; }
+.akbar_c_dark   { background: #2b2b2b; }
+.akbar_c_purple { background: #7a4fd6; }
+.akbar_c_red    { background: #d64545; }
+
+/* ===== Projects ===== */
+.akbar_project_grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.akbar_card {
+  background: #fff; border: 1px solid var(--akbar_line); border-radius: 10px;
+  overflow: hidden; box-shadow: 0 2px 10px rgba(29, 95, 224, .08);
+  transition: transform .2s;
+}
+.akbar_card:hover { transform: translateY(-4px); }
+.akbar_card_img { height: 96px; display: grid; place-items: center; font-size: 2.6rem; }
+.akbar_img_bi   { background: linear-gradient(135deg, #cfe0ff, #eaf1ff); }
+.akbar_img_db   { background: linear-gradient(135deg, #c8ecd2, #e8f7ec); }
+.akbar_img_help { background: linear-gradient(135deg, #ffe2c7, #fff1e4); }
+.akbar_img_py   { background: linear-gradient(135deg, #d6d3ff, #eeedff); }
+.akbar_card_body { padding: 12px 14px 14px; }
+.akbar_card_title { font-size: .85rem; font-weight: 600; }
+.akbar_card_desc { font-size: .72rem; color: var(--akbar_muted); margin: 4px 0 8px; }
+.akbar_card_link { font-size: .72rem; font-weight: 600; color: var(--akbar_blue); }
+.akbar_card_link:hover { text-decoration: underline; }
+
+/* ===== Footer ===== */
+#akbar_contact { background: var(--akbar_navy); color: #fff; margin-top: 44px; padding: 22px 0 12px; }
+.akbar_footer_inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; padding-bottom: 14px; border-bottom: 1px solid #263556; }
+.akbar_footer_brand strong { display: block; font-size: 1rem; }
+.akbar_footer_brand small { color: #9fb0d4; font-size: .72rem; }
+.akbar_footer_contact { display: flex; gap: 22px; flex-wrap: wrap; font-size: .78rem; }
+.akbar_copyright { width: min(1040px, 92%); margin: 10px auto 0; font-size: .7rem; color: #9fb0d4; }
+
+/* ===== Responsive ===== */
+@media (max-width: 860px) {
+  .akbar_hero_inner, .akbar_about_inner { grid-template-columns: 1fr; }
+  .akbar_photo { justify-self: start; }
+  .akbar_skill_grid { grid-template-columns: repeat(2, 1fr); }
+  .akbar_project_grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .akbar_menu { gap: 14px; }
+  .akbar_logo { font-size: 1rem; }
+  .akbar_project_grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .akbar_card { transition: none; }
+}
